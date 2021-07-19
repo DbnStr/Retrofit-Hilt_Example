@@ -24,9 +24,9 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideCobaltService(retrofit : Retrofit) : MainService = retrofit.create(MainService::class.java)
+    fun provideMainService(retrofit : Retrofit) : MainService = retrofit.create(MainService::class.java)
 
     @Provides
     @Singleton
-    fun provideCobaltRemoteData(cobaltService : MainService) : MainRemoteData = MainRemoteData(cobaltService)
+    fun provideMainRemoteData(mainService : MainService) : MainRemoteData = MainRemoteData(mainService)
 }

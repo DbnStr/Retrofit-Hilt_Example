@@ -18,6 +18,9 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        viewModel.getUser(0).observe(viewLifecycleOwner, {user ->
+            println(user.age)
+        })
         return inflater.inflate(R.layout.fragment_main, container, false)
     }
 }

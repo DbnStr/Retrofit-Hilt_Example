@@ -6,6 +6,6 @@ import retrofit2.http.Path
 
 interface MainService {
 
-    @GET("User/{userId}")
+    @GET("Users/{userId}.json")
     suspend fun getUser(@Path("userId") userId : Int) : Response<User>
 }
