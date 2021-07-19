@@ -1,5 +1,6 @@
 package com.example.hilt_retrofit_example
 
+import com.example.hilt_retrofit_example.data.MainRemoteData
 import javax.inject.Inject
 import javax.inject.Singleton
 

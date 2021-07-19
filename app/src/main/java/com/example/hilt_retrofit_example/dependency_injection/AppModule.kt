@@ -1,5 +1,7 @@
-package com.example.hilt_retrofit_example
+package com.example.hilt_retrofit_example.dependency_injection
 
+import com.example.hilt_retrofit_example.data.MainRemoteData
+import com.example.hilt_retrofit_example.api.MainService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

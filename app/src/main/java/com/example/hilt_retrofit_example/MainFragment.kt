@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.viewModels
+import com.example.hilt_retrofit_example.view_models.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import org.w3c.dom.Text
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val constraintLayout = inflater.inflate(R.layout.fragment_main, container, false)
                 as ConstraintLayout
         val name : TextView = constraintLayout.findViewById(R.id.name_field)

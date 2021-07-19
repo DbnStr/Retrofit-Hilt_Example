@@ -1,4 +1,4 @@
-package com.example.hilt_retrofit_example
+package com.example.hilt_retrofit_example.data
 
 data class User(
     val age : Int,
