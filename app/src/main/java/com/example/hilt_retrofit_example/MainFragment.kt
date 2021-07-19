@@ -1,5 +1,6 @@
 package com.example.hilt_retrofit_example
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ class MainFragment : Fragment() {
 
     private val viewModel by viewModels<MainViewModel>()
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,8 +27,8 @@ class MainFragment : Fragment() {
         val name : TextView = constraintLayout.findViewById(R.id.name_field)
         val age : TextView = constraintLayout.findViewById(R.id.age_field)
         viewModel.getUser(0).observe(viewLifecycleOwner, {user ->
-            name.text = user.name
-            age.text = user.age.toString()
+            name.text = "name : " + user.name
+            age.text = "age : " + user.age.toString()
         })
         return constraintLayout
     }
