@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import dagger.hilt.EntryPoint
+import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 
-@EntryPoint
+@AndroidEntryPoint
 class MainFragment : Fragment() {
+
+    private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
